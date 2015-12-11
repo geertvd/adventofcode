@@ -5,11 +5,9 @@ script, password = argv
 
 def isvalid(password):
     doubles = re.compile(r'([a-z])\1').findall(password)
-    alphabet = list(string.ascii_lowercase)
     combofound = False
-    for i,letter in enumerate(alphabet[:-2]):
-        combo = ''.join(alphabet[i:i+3])
-        if combo in password:
+    for i in range(0, len(password)-2):
+        if ord(password[i+1]) == ord(password[i]) + 1 and ord(password[i+2]) == ord(password[i]) + 2:
             combofound = True
             break;
 
