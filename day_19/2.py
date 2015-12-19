@@ -4,8 +4,6 @@ variations = set()
 def do_replacement(molecule, recursion, replacement_keys):
     global replacements
     for char in replacement_keys:
-        if (recursion == 1):
-            print char
         start = 0
         while molecule.find(char, start) is not -1:
             index = molecule.find(char, start)
