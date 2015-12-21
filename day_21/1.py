@@ -25,7 +25,7 @@ def win_fight(me, boss):
     return math.ceil(me['hit points'] / boss['hit']) >= math.ceil(boss['hit points'] / me['hit'])
 
 
-def get_stats(weapon, armor=False, rings=[]):
+def get_stats(weapon, armor, rings):
     me = dict()
     me['hit points'] = 100
     me['damage'] = weapon['damage'] + sum(map(lambda x: x['damage'], rings))
