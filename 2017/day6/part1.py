@@ -23,8 +23,8 @@ def distribute_blocks(banks):
 
 distribution_archive = []
 while len(distribution_archive) == len(set(distribution_archive)):
-    distribution_archive.append(''.join(map(str, puzzle_input)))
     puzzle_input = distribute_blocks(puzzle_input)
+    distribution_archive.append(''.join(map(str, puzzle_input)))
     puzzle_output += 1
 
-print puzzle_output - 1
+print puzzle_output
