@@ -13,10 +13,7 @@ def parse_line(line):
         line['parents'] = parts.group(4).split(', ')
     else:
         line['real_weight'] = line['weight']
-
-
     return line
-
 
 towers = {}
 for line in lines:
@@ -41,7 +38,6 @@ def calc_real_weight():
 
         if not tower_parent_weights:
             continue
-
 
         for index, tower_parent_weight in enumerate(tower_parent_weights):
             if tower_parent_weights.count(tower_parent_weight) == 1:
